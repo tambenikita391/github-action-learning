@@ -14,3 +14,12 @@ jobs:
         run: echo "hello world !!"
       - name: print chalo
         run: echo "Chalo world !!" 
+        
+jobs:
+  chaloworld:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print chalo
+        run: echo "chalo world !!"
+              
