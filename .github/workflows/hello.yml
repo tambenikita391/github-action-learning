@@ -3,7 +3,7 @@ name: Learn basic of GitHub Action
 on:
   push:
     branches:
-      -  master
+      -  main
 
 jobs:
   build:
