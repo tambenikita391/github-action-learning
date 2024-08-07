@@ -6,22 +6,13 @@ on:
       -  main
 
 jobs:
-  helloworld:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print hellow
-        run: echo "hello world !!"
-      - name: print chalo
-        run: echo "Chalo world !!" 
-        
-    
-  chaloworld:
-      runs-on: ubuntu-latest
-
-      steps:
-       - name: print chalo
-         run: cat /etc/os-release
+      - name: Build with maven
+        run: mvn clean install
+      
           
      
               
