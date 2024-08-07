@@ -21,7 +21,7 @@ jobs:
 
       steps:
        - name: print chalo
-         run: echo "Chalo world !!" 
+         run: cat /etc/os-release
           
      
               
