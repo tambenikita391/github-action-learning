@@ -6,7 +6,7 @@ on:
       -  main
 
 jobs:
-  install-java:
+  build:
     runs-on: ubuntu-latest
     container:
       image: alpine:latest
