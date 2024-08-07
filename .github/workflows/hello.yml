@@ -18,7 +18,9 @@ jobs:
           apk add openjdk17 maven
         
       - name: Build with maven
-        run: mvn clean install
+        run:
+          cd C:\Users\tambe\eclipse-workspace
+          mvn clean install
       
           
      
