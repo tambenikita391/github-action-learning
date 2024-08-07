@@ -6,8 +6,10 @@ on:
       -  main
 
 jobs:
-  build:
+  install-java:
     runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
 
     steps:
       - name: install java
