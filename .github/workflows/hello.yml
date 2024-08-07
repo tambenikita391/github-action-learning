@@ -16,7 +16,7 @@ jobs:
         run: apk add --no-cache openjdk17-jdk
         
       - name: Install Maven
-        run: sudo apt-get update && sudo apt-get install -y maven
+        run: apk-get update && apk-get install -y maven
         
       - name: Build with maven
         run: mvn clean install
