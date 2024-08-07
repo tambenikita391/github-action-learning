@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: install java
+        run: apk add --no-cache openjdk17-jdk
+        
       - name: Build with maven
         run: mvn clean install
       
