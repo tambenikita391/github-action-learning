@@ -12,11 +12,10 @@ jobs:
       image: alpine:latest
 
     steps:
-      - name: install java
-        run: apk add --no-cache openjdk17-jdk
-        
-      - name: Install Maven
-        run: apk-get update && apk-get install -y maven
+      - name: Install dependencies
+        run: |
+          apk update
+          apk add openjdk17 maven
         
       - name: Build with maven
         run: mvn clean install
