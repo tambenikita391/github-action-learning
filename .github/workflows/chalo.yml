@@ -1,0 +1,14 @@
+name: Learn basics of GitHub actions
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  chaloworld:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: print chalo
+       run: cat /etc/os-release
