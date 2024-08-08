@@ -1,16 +1,35 @@
-name: Learn basics of GitHub actions
+name: Learn basic of GitHub Action
+
 
 on:
   push:
     branches:
-    - main
-
+      -  main
 jobs:
-  chaloworld:
+  print-os-release:
     runs-on: ubuntu-latest
-    container: 
-      image: alpine:latest
-
     steps:
-     - name: print chalo
-       run: cat /etc/os-release
+      - name: print os-release
+        run: cat /etc/os-release
+        
+  install-java:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
+    steps:
+      - name: install java
+        run: apk add --no-cache openjdk11-jdk
+             print java -version
+             java --version
+             echo "MAVEN_VERSION =1234" >> $GITHUB-ENV
+
+      - name: print maven version
+        run: echo MAVEN_VERSION
+ 
+  print-env:
+     runs-on: ubuntu-latest
+     container:
+       image: alpine:latest
+     steps:
+       - name: print env
+         run: echo JDK_VERSION
