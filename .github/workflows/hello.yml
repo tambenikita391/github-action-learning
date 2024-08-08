@@ -4,24 +4,19 @@ on:
   push:
     branches:
       -  main
-
 jobs:
-  build:
+  print-os-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print os-release
+        run: cat /etc/os-release
+        
+  install-java:
     runs-on: ubuntu-latest
     container:
       image: alpine:latest
-
     steps:
-      - name: Install dependencies
-        run: |
-          apk update
-          apk add openjdk17 maven
-        
-      - name: Build with maven
-        run:
-          cd C:\Users\tambe\eclipse-workspace
-          mvn clean install
-      
-          
-     
-              
+      - name: install java
+        run: apk add --no-cache openjdk11-jdk
+      - name: print java -version
+        run: java --version
